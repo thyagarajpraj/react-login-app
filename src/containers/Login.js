@@ -38,6 +38,11 @@ class Login extends Component {
     }
 
     onChangedHandler = (event, id) => {
+        const updatedAuthForm = { ...this.state.authForm };
+        const updatedFormElement = { ...updatedAuthForm[id] };
+        updatedFormElement.value = event.target.value;
+        updatedAuthForm[id] = updatedFormElement;
+        this.setState({ authForm: updatedAuthForm });
     };
 
     onSubmitHandler = (event) => {
