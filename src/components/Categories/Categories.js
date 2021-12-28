@@ -22,8 +22,6 @@ class Categories extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         let same = isEqual(this.props.categories, nextProps.categories);
-        // let same2 = Object.entries(nextProps.categories).toString() === Object.entries(this.props.categories).toString();
-        // let same2 = JSON.stringify(this.props.categories) === JSON.stringify(nextProps.categories)
         return !same;
     }
 
@@ -48,7 +46,7 @@ class Categories extends Component {
         }
 
         return <Auxiliary>
-            <div className="container">
+            <div className="gridContainer">
                 <h2 style={{ alignItems: 'center' }}>Use AG Grid to show data</h2>
                 <br />
                 <Input type='text' value={this.state.inputText} onValueChange={(e) => this.onValueChange(e)} />

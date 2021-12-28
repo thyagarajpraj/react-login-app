@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
-import Card from '../components/UI/Card'
+import Card from '../components/UI/Card/Card'
 import Logo from '../../src/assets/images/word-facebook-icon.webp';
 import * as actions from '../store/actions/index';
 import { connect } from 'react-redux';

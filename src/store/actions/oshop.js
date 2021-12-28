@@ -27,6 +27,8 @@ export const getCategories = (val) => {
         axios.get('https://oshop-b553e.firebaseio.com/categories.json')
             .then(res => {
                 var data = res.data;
+                let allCat = { 'all': { name: 'All Categories' } };
+                data = Object.assign(data, allCat);
                 for (var key in data) {
                     if (key.indexOf(val) === -1)
                         delete data[key];
